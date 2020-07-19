@@ -1,14 +1,21 @@
 import express from 'express'
 import bodyParser from 'body-parser'
 import cookieSession from 'cookie-session'
+import cors from 'cors'
 
 const app = express()
 
+app.use(
+  cors({
+    origin: ['http://pob.com', 'http://www.pob.com'],
+    credentials: true,
+  })
+)
 app.use(bodyParser.json())
 app.use(
   cookieSession({
     secret: 'secret-key',
-    sameSite: 'lax',
+    sameSite: 'strict',
   })
 )
 
