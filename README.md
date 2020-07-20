@@ -53,3 +53,10 @@ sudo systemctl reload nginx
 ```
 
 Note: nginx simple guide: https://medium.com/moving-cubes/guide-set-up-open-source-ssl-for-nginx-on-linux-726867d11b6
+
+Useful commands:
+
+```bash
+sudo systemctl status nginx
+sudo systemctl start nginx
+```

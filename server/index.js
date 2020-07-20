@@ -7,7 +7,7 @@ const app = express()
 
 app.use(
   cors({
-    origin: ['http://pob.com', 'http://www.pob.com'],
+    origin: ['http://pob.com', 'http://www.pob.com', 'http://toy.com', 'http://www.toy.com'],
     credentials: true,
   })
 )
@@ -15,7 +15,7 @@ app.use(bodyParser.json())
 app.use(
   cookieSession({
     secret: 'secret-key',
-    sameSite: 'strict',
+    sameSite: 'lax',
   })
 )
 
